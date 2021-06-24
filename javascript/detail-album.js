@@ -23,7 +23,7 @@ window.addEventListener("load", function(){
             })
             .then(function (datos){
                 let album_1 = document.querySelector('#album_1');
-                album_1.innerHTML += `<img src="${datos.cover_big}"><h2>${datos.artist.name}</h2><h2>${datos.title}</h2>`;
+                album_1.innerHTML += `<img src="${datos.cover_big}"><h2>${datos.artist.name}</h2><h2>${datos.title}</h2><h2>${datos.release_date}</h2><h2>${datos.genres.data[0].name}</h2><h2>${datos.tracks.data[0].title}</h2>`;
             })
             .catch(function(error){
                 console.log("el error es:" + error);
