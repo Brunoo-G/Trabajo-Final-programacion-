@@ -3,18 +3,16 @@ window.addEventListener("load", function(){
     const proxy = 'https://cors-anywhere.herokuapp.com/';
 
     let idArtista =devolver_artista_id();
-    
-    mostrar_info_artista(idArtista);
-    mostrar_discografia_artista(idArtista);
 
-
-    function devolver_artista_id()
-    {
+    function devolver_artista_id(){
         let url_string = window.location.href;
         let url = new URL(url_string);
         return url.searchParams.get("id");
         
     }
+
+    mostrar_info_artista(idArtista);
+    mostrar_discografia_artista(idArtista);
 
 
     function mostrar_info_artista(idArtista)

@@ -24,7 +24,7 @@ window.addEventListener("load", function(){
                         </li> 
                         
                         <li>
-                        <h1>Album</h1>
+                        <a href="detail-artist.js?id=${datos.data[0].artist.id}"" ><h1>Album</h1></a>
                         </li>
                     </ul> 
                 </div>`;

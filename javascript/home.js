@@ -3,8 +3,8 @@ window.addEventListener("load", function(){
     const proxy = 'https://cors-anywhere.herokuapp.com/';
 
     /* Lista de artistas del home */ 
-    let artistas_favoritos_id = [8706544,429675,11289472,288166,246791];
-    mostrar_artitas_favoritos(artistas_favoritos_id);
+    let artistasFavoritos_id = [8706544,429675,11289472,288166,246791];
+    mostrar_artitas_favoritos(artistasFavoritos_id);
 
 
     function mostrar_artitas_favoritos (array_artistas_favoritos){
