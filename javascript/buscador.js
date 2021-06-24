@@ -1,12 +1,10 @@
 window.addEventListener("load", function(){
 
-    let queryString = location.search
-    let queryStringObj = new URLSearchParams(queryString)
-    let resultadoDeBusqueda = queryStringObj.get("busqueda")
+    let queryString = location.search;
+    let queryStringObj = new URLSearchParams(queryString);
+    let resultadoDeBusqueda = queryStringObj.get("busqueda");
 
     const proxy = 'https://cors-anywhere.herokuapp.com/';
-    
-    if (resultadoDeBusqueda != null){
 
         fetch(`${proxy}https://api.deezer.com/search?q=${resultadoDeBusqueda}`)
             .then(function (response){
@@ -33,11 +31,10 @@ window.addEventListener("load", function(){
                 console.log("el error es:" + error)
             })
 
-            if (resultadoDeBusqueda == "") {
-                this.alert("Debes escribir algo!");
-            }else if (resultadoDeBusqueda.length <= 3)
-                    this.alert("Debes escribir al menos tres caracteres!");
+            // if (resultadoDeBusqueda == "") {
+            //     this.alert("Debes escribir algo!");
+            // }else if (resultadoDeBusqueda.length <= 3)
+            //         this.alert("Debes escribir al menos tres caracteres!");
 
-    }
 });
 
