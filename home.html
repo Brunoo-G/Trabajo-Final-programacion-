@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="style/style.css" rel="stylesheet">
+    <title>Inicio</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Cabecera --> 
+
+        <header class="main-header">
+
+            <img class="logo" src="images/logo.png" alt="Logo de la pagina">   
+
+            <form action="search-results.html" method="GET">
+                <input class="casillero" type="text" name="busqueda" placeholder="¡Busca a tu artista preferido!">
+                <input class="boton" type="submit" value="Buscar">
+            </form>  
+            
+            <div class="navegacion">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="playlist.html">Playlists</a></li>
+                    <li><a href="genres.html">Géneros</a></li>    
+                </ul>
+            </div>
+        </header>
+
+
+        <section class="artistas_home">
+            <h1>ARTISTAS DESTACADOS</h1>
+
+            <ul id="lista_favoritos"></ul>
+
+        </section>
+
+        <section class="canciones_home">
+            <h1>CANCIONES MÁS ESCUCHADAS</h1>
+
+            <ul>
+                <div class="canciones" id="cancion_1"></div>
+                <div class="canciones" id="cancion_2"></div>
+                <div class="canciones" id="cancion_3"></div>
+                <div class="canciones" id="cancion_4"></div>
+                <div class="canciones" id="cancion_5"></div>
+            </ul>
+
+            <iframe id="player" title="deezer-widget" src="https://widget.deezer.com/widget/dark/playlist/1479458365?tracklist=false"
+             width="100%" height="150" frameborder="0" allowtransparency="true" allow="encrypted-media; clipboard-write"></iframe>
+             
+        </section>
+
+        <section class="albumes_home">
+            <h1>ALBUMES RECONOCIDOS</h1>
+            
+            <ul id="lista_albumes"></ul>
+        </section>
+    </div>
+
+    
+
+    <footer>
+ 
+        <ul class="terminos">
+            <li><a href="#">Términos y condiciones</a></li>
+
+            <li><a href="#">Ayuda</a></li>
+
+            <li><a href="#">Contacto</a></li>
+                
+            <li><a href="#">Privacidad</a></li>
+        </ul>
+
+        <p>Copyright ReVibe 2021. Todos los derechos reserados ©</p> 
+        <p>Facundo Bory, Tomas Fontana y Bruno Gonzalez</p>   
+    </footer>
+
+    <script src="javascript/home.js"></script>
+    <script src="javascript/buscador.js"></script>
+</body>
+</html>
