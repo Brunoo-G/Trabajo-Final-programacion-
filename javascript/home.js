@@ -105,33 +105,32 @@ window.addEventListener("load", function(){
 
      document.getElementById("cancion_5").addEventListener("click", function(){
         let player = document.getElementById("player");
-        let trackid = this.getAttribute("data");
-        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
+        let trackId = this.getAttribute("data");
+        player.src = `https://widget.deezer.com/widget/dark/track/${trackId}`;
 
     });
     document.getElementById("cancion_4").addEventListener("click", function(){
         let player = document.getElementById("player");
-        let trackid = this.getAttribute("data");
-        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
+        let trackId = this.getAttribute("data");
+        player.src = `https://widget.deezer.com/widget/dark/track/${trackId}`;
 
     });
     document.getElementById("cancion_3").addEventListener("click", function(){
         let player = document.getElementById("player");
-        let trackid = this.getAttribute("data");
-        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
+        let trackId = this.getAttribute("data");
+        player.src = `https://widget.deezer.com/widget/dark/track/${trackId}`;
 
     });
     document.getElementById("cancion_2").addEventListener("click", function(){
         let player = document.getElementById("player");
-        let trackid = this.getAttribute("data");
-        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
+        let trackId = this.getAttribute("data");
+        player.src = `https://widget.deezer.com/widget/dark/track/${trackId}`;
 
     });
     document.getElementById("cancion_1").addEventListener("click", function(){
         let player = document.getElementById("player");
-        let trackid = this.getAttribute("data");
-        player.src = `https://widget.deezer.com/widget/dark/track/${trackid}`;
-
+        let trackId = this.getAttribute("data");
+        player.src = `https://widget.deezer.com/widget/dark/track/${trackId}`;
     });
 
     /* Lista de Albumes del home */

@@ -192,8 +192,14 @@ footer p{
     border-radius: 5px;
 }
 
+.canciones div{
+    display: flex;
+    flex-direction: row;
+    margin: 5%;
+}
+
 .artistas h1{
-       background-color: rgb(31, 31, 73);
+    background-color: rgb(31, 31, 73);
     margin-top: 5%;
     margin-bottom: 3%;
     text-align: center;
@@ -218,7 +224,7 @@ footer p{
 
 .albumes h1{
     background-color: rgb(31, 31, 73);
-    margin-top: 5%;
+    margin-top: 0%;
     margin-bottom: 3%;
     text-align: center;
     padding: 2.5%;
@@ -308,6 +314,7 @@ footer p{
     background-color: rgb(31, 31, 73);
     font-family: 'Suez One', serif;
     font-weight: normal;
+    list-style: none;
 }
 
 .resultado a{
@@ -601,6 +608,10 @@ footer p{
     }
     div .albumes{
         align-items: center;
+    }
+
+    .canciones h1{
+
     }
     
     /* detalle de genero */

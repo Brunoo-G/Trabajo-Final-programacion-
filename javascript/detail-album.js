@@ -47,7 +47,7 @@ window.addEventListener("load", function(){
                     document.querySelector('#lista_canciones').innerHTML += `
                     <div class="canciones" id="cancion_${i}">
                         <img src="${datos.cover_medium}">
-                        <h2>${datos.tracks.data[i].title}</h2>
+                        <h2>${i+1} - ${datos.tracks.data[i].title}</h2>
                     </div>`;
                 }
             })
