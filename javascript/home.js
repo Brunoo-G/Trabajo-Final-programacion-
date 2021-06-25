@@ -40,7 +40,23 @@ window.addEventListener("load", function(){
         console.log(datos);
         let cancion_1 = document.querySelector('#cancion_1')
         cancion_1.setAttribute("data", datos.id);
-        cancion_1.innerHTML = `<a href="detail-songs.html?id=${datos.id}"><img src="${datos.album.cover_medium}"></a><h2>${datos.title}</h2>`;
+        cancion_1.innerHTML = `<a href="detail-songs.html?id=${datos.id}"><img src="${datos.album.cover_medium}"></a><h2>${datos.title}</h2><div><a href="#" id="agregar_cancion_1" data="${datos.id}">Agregar a Favoritos</a></div>`;
+       
+        document.getElementById("agregar_cancion_1").addEventListener("click", function(e){
+            e.preventDefault();
+            let trackId = this.getAttribute("data");
+            let tracks=localStorage.getItem("tracks");
+
+            if(tracks){
+                tracks=  tracks.split(',');
+            }else{
+                tracks=  [];
+            }
+        
+            tracks.push(trackId)
+            window.localStorage.setItem("tracks", tracks.toString()) //"a,b,c"
+            alert("se ha agregado la cancion a tu playlist")
+        });
     })
     .catch(function(error){
         console.log("el error es:" + error)
@@ -54,7 +70,21 @@ window.addEventListener("load", function(){
         console.log(datos);
         let cancion_2 = document.querySelector('#cancion_2')
         cancion_2.setAttribute("data", datos.id);
-        cancion_2.innerHTML = `<a href="detail-songs.html?id=${datos.id}"><img src="${datos.album.cover_medium}"></a><h2>${datos.title}</h2>`;
+        cancion_2.innerHTML = `<a href="detail-songs.html?id=${datos.id}"><img src="${datos.album.cover_medium}"></a><h2>${datos.title}</h2><div><a href="#" id="agregar_cancion_2" data="${datos.id}">Agregar a Favoritos</a></div>`;
+       
+        document.getElementById("agregar_cancion_2").addEventListener("click", function(e){
+            e.preventDefault();
+            let trackId = this.getAttribute("data");
+            let tracks=localStorage.getItem("tracks");
+            if(tracks){
+                tracks=  tracks.split(',');
+            }else{
+                tracks=  [];
+            }
+            tracks.push(trackId)
+            window.localStorage.setItem("tracks", tracks.toString())
+            alert("se ha agregado la cancion a tu playlist")
+        });
     })
     .catch(function(error){
         console.log("el error es:" + error)
@@ -68,7 +98,20 @@ window.addEventListener("load", function(){
         console.log(datos);
         let cancion_3 = document.querySelector('#cancion_3')
         cancion_3.setAttribute("data", datos.id);
-        cancion_3.innerHTML = `<a href="detail-songs.html?id=${datos.id}"><img src="${datos.album.cover_medium}"></a><h2>${datos.title}</h2>`;
+        cancion_3.innerHTML = `<a href="detail-songs.html?id=${datos.id}"><img src="${datos.album.cover_medium}"></a><h2>${datos.title}</h2><div><a href="#" id="agregar_cancion_3" data="${datos.id}">Agregar a Favoritos</a></div>`;
+        document.getElementById("agregar_cancion_3").addEventListener("click", function(e){
+            e.preventDefault();
+            let trackId = this.getAttribute("data");
+            let tracks=localStorage.getItem("tracks");
+            if(tracks){
+                tracks=  tracks.split(',');
+            }else{
+                tracks=  [];
+            }
+            tracks.push(trackId)
+            window.localStorage.setItem("tracks", tracks.toString())
+            alert("se ha agregado la cancion a tu playlist")
+        });
     })
     .catch(function(error){
         console.log("el error es:" + error)
@@ -82,7 +125,20 @@ window.addEventListener("load", function(){
         
         let cancion_4 = document.querySelector('#cancion_4')
         cancion_4.setAttribute("data", datos.id);
-        cancion_4.innerHTML = `<a href="detail-songs.html?id=${datos.id}"><img src="${datos.album.cover_medium}"></a><h2>${datos.title}</h2>`;
+        cancion_4.innerHTML = `<a href="detail-songs.html?id=${datos.id}"><img src="${datos.album.cover_medium}"></a><h2>${datos.title}</h2><div><a href="#" id="agregar_cancion_4" data="${datos.id}">Agregar a Favoritos</a></div>`;
+        document.getElementById("agregar_cancion_4").addEventListener("click", function(e){
+            e.preventDefault();
+            let trackId = this.getAttribute("data");
+            let tracks=localStorage.getItem("tracks");
+            if(tracks){
+                tracks=  tracks.split(',');
+            }else{
+                tracks=  [];
+            }
+            tracks.push(trackId)
+            window.localStorage.setItem("tracks", tracks.toString())
+            alert("se ha agregado la cancion a tu playlist")
+        });
     })
     .catch(function(error){
         console.log("el error es:" + error)
@@ -95,39 +151,57 @@ window.addEventListener("load", function(){
     .then(function(datos){
         let cancion_5 = document.querySelector('#cancion_5'); 
         cancion_5.setAttribute("data", datos.id);
-        cancion_5.innerHTML = `<a href="detail-songs.html?id=${datos.id}"><img src="${datos.album.cover_medium}"></a><h2>${datos.title}</h2>`;
+        cancion_5.innerHTML = `<a href="detail-songs.html?id=${datos.id}"><img src="${datos.album.cover_medium}"></a><h2>${datos.title}</h2><div><a href="#" id="agregar_cancion_5" data="${datos.id}">Agregar a Favoritos</a></div>`;
+        document.getElementById("agregar_cancion_5").addEventListener("click", function(e){
+            e.preventDefault();
+            let trackId = this.getAttribute("data");
+            let tracks=localStorage.getItem("tracks");
+            if(tracks){
+                tracks=  tracks.split(',');
+            }else{
+                tracks=  [];
+            }
+            tracks.push(trackId)
+            window.localStorage.setItem("tracks", tracks.toString())
+            alert("se ha agregado la cancion a tu playlist")
+        });
     })
     .catch(function(error){
         console.log("el error es:" + error)
     });
 
     /* Escuchar canciones en player */ 
-
-     document.getElementById("cancion_5").addEventListener("click", function(){
+   
+     document.getElementById("cancion_5").addEventListener("click", function(e){
+        e.preventDefault();
         let player = document.getElementById("player");
         let trackId = this.getAttribute("data");
         player.src = `https://widget.deezer.com/widget/dark/track/${trackId}`;
 
     });
-    document.getElementById("cancion_4").addEventListener("click", function(){
+    document.getElementById("cancion_4").addEventListener("click", function(e){
+        e.preventDefault();
         let player = document.getElementById("player");
         let trackId = this.getAttribute("data");
         player.src = `https://widget.deezer.com/widget/dark/track/${trackId}`;
 
     });
-    document.getElementById("cancion_3").addEventListener("click", function(){
+    document.getElementById("cancion_3").addEventListener("click", function(e){
+        e.preventDefault();
         let player = document.getElementById("player");
         let trackId = this.getAttribute("data");
         player.src = `https://widget.deezer.com/widget/dark/track/${trackId}`;
 
     });
-    document.getElementById("cancion_2").addEventListener("click", function(){
+    document.getElementById("cancion_2").addEventListener("click", function(e){
+        e.preventDefault();
         let player = document.getElementById("player");
         let trackId = this.getAttribute("data");
         player.src = `https://widget.deezer.com/widget/dark/track/${trackId}`;
 
     });
-    document.getElementById("cancion_1").addEventListener("click", function(){
+    document.getElementById("cancion_1").addEventListener("click", function(e){
+        e.preventDefault();
         let player = document.getElementById("player");
         let trackId = this.getAttribute("data");
         player.src = `https://widget.deezer.com/widget/dark/track/${trackId}`;
